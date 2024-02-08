@@ -45,4 +45,4 @@
 .cube-face-back   { transform: rotateY(180deg) translateZ(100px); }
 .cube-face-left   { transform: rotateY(-90deg) translateZ(100px); }
 .cube-face-top    { transform: rotateX( 90deg) translateZ(100px); }
-.cube-face-bottom { transform: rotateX(-90deg) translateZ(100px); }
+.cube-face-bottom { transform: rotateX(-90deg) translateZ(100px); font-size: 40px;}
