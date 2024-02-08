@@ -1,0 +1,48 @@
+@keyframes spin {
+  from {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+  to {
+    transform: rotateY(360deg) rotateX(360deg);
+  }
+}
+
+#shared-loader {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  width: 200px;
+  height: 200px;
+  margin: 0;
+  perspective: 400px;
+  transform: scale(0.2);
+}
+    
+.cube {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: translateZ(-100px);
+  transition: transform 2s;
+  animation: spin 6s linear infinite;
+}
+
+.cube-face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 2px solid #fff;
+  line-height: 200px;
+  font-size: 80px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  background: #de662c;
+}
+
+.cube-face-front  { transform: rotateY(  0deg) translateZ(100px); }
+.cube-face-right  { transform: rotateY( 90deg) translateZ(100px); }
+.cube-face-back   { transform: rotateY(180deg) translateZ(100px); }
+.cube-face-left   { transform: rotateY(-90deg) translateZ(100px); }
+.cube-face-top    { transform: rotateX( 90deg) translateZ(100px); }
+.cube-face-bottom { transform: rotateX(-90deg) translateZ(100px); }
